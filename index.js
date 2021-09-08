@@ -45,8 +45,9 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(arr){
+  const arrCopy=[...arr];
+  return arrCopy;
 }    
 
 
@@ -64,8 +65,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(arrName){
+  /*your code here*/
+  if (arrName.length === 31) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,9 +87,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(arrName, newFlavor){
+  arrName.splice(0,0, newFlavor);
+  return arrName;
 }
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,8 +105,9 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(arrName){
+  arrName.pop();
+  return arrName;
 }
 
 
@@ -114,8 +123,9 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(arrName, num){
   /*your code here*/
+  return arrName[num];
 }
 
 
@@ -134,8 +144,11 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(arrName, flavor){
   /*your code here*/
+  let someThing = arrName.indexOf(flavor);
+  arrName.splice(someThing, 1);
+  return arrName;
 }
 
 
